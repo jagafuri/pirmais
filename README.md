@@ -1,0 +1,2 @@
+# pirmais
+Linoleja kalkulātors
