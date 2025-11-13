@@ -1,36 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linoleja kalkulātors</title>
-    <link href="stryle.CSS" rel="stylesheet">
+    <title>Linoleja kalkulators</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <div class="container"><!--Galvenais (baltais) konteiners-->
         <h2>Linoleja kalkulators</h2>
         <div class="calculator"><!--Zilais konteiners-->
-            <div class="input-container"><!--baltais konteiners-->
+            
+            <div class="input-container"><!--Baltais konteiners-->
+                <div class="group">
+                    <label>Telpas platums (m)</label>
+                    <input type="number" id="roomWidth" step="0.01">
+                </div>
+                <div class="group">
+                    <label>Telpas garums (m)</label>
+                    <input type="number" id="roomLength" step="0.01">
+                </div>
+                <div class="group">
+                    <label>Linoleja platums (m)</label>
+                    <input type="number" id="linoliumWidth" step="0.01">
+                </div>
+                <div class="group">
+                    <label>Linoleja cena (€/m<sup>2</sup>)</label>
+                    <input type="number" id="roomLength" step="0.01">
+                </div>
+                
 
-            </div><!--aizver baltais konteiners-->
-            <div class="autput-container"><!--zaļais konteiners-->
+            </div><!--Aizver baltais konteiners-->
+            <div class="output-container"><!--Zaļais konteiners-->
+                zaļais
 
-            </div><!--aizver zaļais konteiners-->
+            </div><!--Aizver zaļais konteiners-->
 
+        </div><!--Aizver zilais konteiners-->
 
-        </div><!--Aizver Zilais konteiners-->
-        
-    </div><!--Aizverošais galvenaus (baltais) konteineris-->
-
-
+    </div><!--Aizver Galvenais (baltais) konteiners-->
 
 
 
 
-
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
     
 </body>
 </html>
