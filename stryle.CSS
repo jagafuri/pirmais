@@ -51,26 +51,25 @@ body {
 }
 
 .group {
-   width: 100%;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   flex: 1; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;  /*+/-*/
 }
 
 .button-group {
     width: 100%;
-   display: flex;
-   align-items: center;
-   flex-direction: column;
-   margin-top: 10px;
-
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
 }
 
-input.button {
+input, button {
     margin: 5px 0;
     padding: 10px;
-    border: 1px solid #cccc;
+    border: 1px solid #cccccc;
     border-radius: 5px;
 }
 
@@ -81,11 +80,9 @@ button {
     cursor: pointer;
 }
 
-
 input {
     width: 90%;
     padding: 8px;
-
 }
 
 .result-row {
