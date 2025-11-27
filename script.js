@@ -1,39 +1,22 @@
-function colculateLinolium(){
-    let roomwidth = parseFloat(document.getElementById("roomWidth").value);
-    let roomLeght = parseFloat(document.getElementById("roomLength").value);
-    let linoiumwidht = parseFloat(document.getElementById("linoliumWidth").value);
+function calculateLinolium() {
+    //Mainīgo vērtību paņemšana no HTML dokumenta
+    let roomWidth = parseFloat(document.getElementById("roomWidth").value);
+    let roomLenght = parseFloat(document.getElementById("roomLength").value);
+    let linoliumWidth = parseFloat(document.getElementById("linoliumWidth").value);
     let linoliumPrice = parseFloat(document.getElementById("linoliumPrice").value);
 
-
-
-    let stripsNededCross = Math.ceil(roomLeght/linoiumwidht);
-    let linoliumLeghtCross = stripsNededCross * roomLeght;
-    let linoliumAreaCross = linoliumLeghtCross * linoiumwidht;
+    //Aprēķinu veikšana
+    let stripsNeededCross = Math.ceil(roomLenght/linoliumWidth);
+    let linoliumLenghtCross = stripsNeededCross * roomWidth;
+    let linoliumAreaCross = linoliumLenghtCross * linoliumWidth;
     let costCross = linoliumAreaCross * linoliumPrice;
-    let wasteCross = inoliumAreaCrss - (roomwidth*roomLeght);
-    let wasteCoastCross = wasteCross * linoliumPrice;
+    let wasteCross = linoliumAreaCross - (roomWidth*roomLenght);
+    let wasteCostCross = wasteCross * linoliumPrice;
 
-
-
-    document.getElementById("lengthCross").value = linoliumLeghtCross.toFixed(2) + " m";
-    document.getElementById("costCross").value = costCross.toFixed(2) + "  EUR";
-    document.getElementById("wasteCross").value = wasteCross.toFixed(2) + "  m2";
-    document.getElementById("wasteCostCross").value = wasteCostCross.toFixed(2) + "  EUR";
-
-    
-
-    let stripsNededLong = Math.ceil(roomwidth/linoiumwidht);
-    let linoliumLeghtLong = stripsNededLong * roomwidth;
-    let linoliumAreaLong = linoliumLeghtLong * linoiumwidht;
-    let costLong = linoliumAreaLong * linoliumPrice;
-    let wasteLong = linoliumAreaLong - (roomwidth*roomLeght);
-    let wasteCoastLong = wasteLong * linoliumPrice;
-
-
-    
-    document.getElementById("lengthCross").value = linoliumLeghtCross.toFixed(2) + " m";
-    document.getElementById("costCross").value = costCross.toFixed(2) + "  EUR";
-    document.getElementById("wasteCross").value = wasteCross.toFixed(2) + "  m2";
-    document.getElementById("wasteCostCross").value = wasteCoastCross.toFixed(2) + "  EUR";
+    //Izrēķināto vērtību ievietošana HTML dokumentā rezultātu sadaļā
+    document.getElementById("lengthCross").value = linoliumLenghtCross.toFixed(2) + " m";
+    document.getElementById("costCross").value = costCross.toFixed(2) + " EUR";
+    document.getElementById("wasteCross").value = wasteCross.toFixed(2) + " m2";
+    document.getElementById("wasteCostCross").value = wasteCostCross.toFixed(2) + " EUR";
 
 }
