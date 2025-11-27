@@ -6,10 +6,10 @@ function colculateLinolium(){
 
 
 
-    let stripsNededCross = Math.ceil(roomwidth/linoiumwidht);
+    let stripsNededCross = Math.ceil(roomLeght/linoiumwidht);
     let linoliumLeghtCross = stripsNededCross * roomLeght;
     let linoliumAreaCross = linoliumLeghtCross * linoiumwidht;
-    let costCross = linoliumAreaCross * linoliumPrice
+    let costCross = linoliumAreaCross * linoliumPrice;
     let wasteCross = inoliumAreaCrss - (roomwidth*roomLeght);
     let wasteCoastCross = wasteCross * linoliumPrice;
 
@@ -20,5 +20,20 @@ function colculateLinolium(){
     document.getElementById("wasteCross").value = wasteCross.toFixed(2) + "  m2";
     document.getElementById("wasteCostCross").value = wasteCostCross.toFixed(2) + "  EUR";
 
+    
+
+    let stripsNededLong = Math.ceil(roomwidth/linoiumwidht);
+    let linoliumLeghtLong = stripsNededLong * roomwidth;
+    let linoliumAreaLong = linoliumLeghtLong * linoiumwidht;
+    let costLong = linoliumAreaLong * linoliumPrice;
+    let wasteLong = linoliumAreaLong - (roomwidth*roomLeght);
+    let wasteCoastLong = wasteLong * linoliumPrice;
+
+
+    
+    document.getElementById("lengthCross").value = linoliumLeghtCross.toFixed(2) + " m";
+    document.getElementById("costCross").value = costCross.toFixed(2) + "  EUR";
+    document.getElementById("wasteCross").value = wasteCross.toFixed(2) + "  m2";
+    document.getElementById("wasteCostCross").value = wasteCoastCross.toFixed(2) + "  EUR";
 
 }
